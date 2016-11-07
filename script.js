@@ -49,6 +49,8 @@ function printTable(thisPuzzleOrder)
             cPiece.id="c"+k; 
             cPiece.innerHTML = "<td>" + thisPuzzleOrder[k] + "</td>";
             cPiece.onclick = function (){cellClicked(this);};
+            cPiece.onmouseover = function() {highlightIfValid(this);};
+			cPiece.onmouseout = function() {removeHighlight(this);};
             if(thisPuzzleOrder[k] == "")
             {
                 cPiece.id="emptySquare";
@@ -190,4 +192,58 @@ function startTimer()
     {
         document.getElementById("pTimer").innerHTML = "Time Elapsed = " + parseInt(timer/60) + " minute " + timer%60 + " second.";                 
     }
+}
+
+//function to highlight cell on hover if its movable -Harika
+
+function highlightIfValid(cell) {
+	nRow = parseInt(cell.tags / totalRows);
+    nCol = cell.tags % totalCols;
+    emptyRow = parseInt(emptySquare/totalRows);
+    emptyCol = emptySquare % totalCols;
+
+    console.log("Cell Col :" + nCol +"\nEmptyCol : "+ emptyCol);
+
+    if(emptyRow == nRow)
+    {
+       //highlight on hover
+	   cell.className += " highlightTile";
+	 
+    }
+	if(emptyCol == nCol){
+		cell.className += " highlightTile";
+	}
+
+	}
+//remove highlight
+function removeHighlight(cell) {
+				var className =cell.className;
+				className = className.replace(" highlightTile","");
+				cell.className = className;
+}
+			
+//end -Harika
+
+//function to change background of tiles
+function changeBg(){
+				var option = document.getElementById("bg");
+				var val = option.options[option.selectedIndex].value;
+				var body = document.getElementsByTagName('body')[0];
+				if(val==0){
+					changeStyleSheet("style0.css") ;
+				} 
+				else if(val==1){
+					changeStyleSheet("style1.css") ;
+				}
+				else if(val==2){
+					changeStyleSheet("style2.css") ;
+				}
+				else if(val==3){
+					changeStyleSheet("style3.css") ;
+				} 
+			}
+			
+//function to change stylesheet
+function changeStyleSheet(sheet) {
+    document.getElementById("style").setAttribute("href", sheet);  
 }

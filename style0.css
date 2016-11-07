@@ -43,54 +43,53 @@ td
 }
 
 #c0 {
-	background:url('mario.jpg') 0 0 no-repeat;
+	background:url('luigi.jpg') 0 0 no-repeat;
 }
 
 #c1 {
-	background:url('mario.jpg') -100px 0  no-repeat;
+	background:url('luigi.jpg') -100px 0  no-repeat;
 }
 #c2 {
-	background:url('mario.jpg') -200px 0  no-repeat;
+	background:url('luigi.jpg') -200px 0  no-repeat;
 }
 #c3 {
-	background:url('mario.jpg') -300px 0  no-repeat;
+	background:url('luigi.jpg') -300px 0  no-repeat;
 }
 #c4 {
-	background:url('mario.jpg') 0 -100px  no-repeat;
+	background:url('luigi.jpg') 0 -100px  no-repeat;
 }
 #c5 {
-	background:url('mario.jpg') -100px -100px  no-repeat;
+	background:url('luigi.jpg') -100px -100px  no-repeat;
 }
 #c6 {
-	background:url('mario.jpg') -200px -100px  no-repeat;
+	background:url('luigi.jpg') -200px -100px  no-repeat;
 }
 #c7 {
-	background:url('mario.jpg') -300px -100px  no-repeat;
+	background:url('luigi.jpg') -300px -100px  no-repeat;
 }
 #c8 {
-	background:url('mario.jpg') 0 -200px  no-repeat;
+	background:url('luigi.jpg') 0 -200px  no-repeat;
 }
 #c9 {
-	background:url('mario.jpg') -100px -200px  no-repeat;
+	background:url('luigi.jpg') -100px -200px  no-repeat;
 }
 #c10 {
-	background:url('mario.jpg') -200px -200px  no-repeat;
+	background:url('luigi.jpg') -200px -200px  no-repeat;
 }
 #c11 {
-	background:url('mario.jpg') -300px -200px  no-repeat;
+	background:url('luigi.jpg') -300px -200px  no-repeat;
 }
 #c12 {
-	background:url('mario.jpg') 0 -300px  no-repeat;
+	background:url('luigi.jpg') 0 -300px  no-repeat;
 }
 #c13 {
-	background:url('mario.jpg') -100px -300px  no-repeat;
+	background:url('luigi.jpg') -100px -300px  no-repeat;
 }
 #c14 {
-	background:url('mario.jpg') -200px -300px  no-repeat;
+	background:url('luigi.jpg') -200px -300px  no-repeat;
 }
-
-#emptySquare{
-	background-color:#ffffff;
+#c15{
+	background:url('luigi.jpg') -300px -300px  no-repeat;
 
 }
 

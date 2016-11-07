@@ -1,17 +1,38 @@
 <html>
     <head><title>Game of Fifteen</title>
     <script src="script.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link id="style" rel="stylesheet" type="text/css" href="style.css">
 
     </head>
 
     <body onload="init()">
-        <div align="center" >
-            <h2>15 Puzzle</h2><br/><br/>
-            <table id="pTable" cellspacing="4px" cellpadding="16px" border="1" >
+         <div align="center" >
+		
+			<div class="panel-default page-header">
+				<h1>15 PUZZLE</h1>
+			</div>
+			<!--choose background for tiles-->
+			<div class = "choosebg" align="center">Choose Your Puzzle Background: 
+					<select id="bg" onchange="changeBg()">
+					  <option value="-1">--Select--</option>
+					  
+					  <option value="0">Luigi</option>
+					  <option value="1" >Flintstones</option>
+					  <option value="2" >Tom and Jerry</option>
+					  <option value="3">Mario</option>
+					  
+					</select>
+			</div><br/>
+			    <table id="pTable" cellspacing="4px" cellpadding="16px" border="1" >
             </table>
             <br/>
-            <button onclick="shuffleAndCreatePuzzle()" id="pButton">Play</button>
+            <div >
+					<button type="button" class="button" id="pButton" onclick="shuffleAndCreatePuzzle()">Shuffle</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					
+					 <label id="move"> </label> 
+			
+			</div>
+            <!--<button onclick="shuffleAndCreatePuzzle()" id="pButton">Play</button>-->
             <br/>
             <p id="pTimer"></p>
             <p id="pSteps"></p>
