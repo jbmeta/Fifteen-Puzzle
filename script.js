@@ -101,21 +101,25 @@ function cellClicked(cell)
             slideColUp(cell, nRow, emptyRow);
         }
     }
+
     if(puzzlePieces[puzzlePieces.length-1] == "")
     {
-        var puzzleSolved = true;
+        var puzzleSolved = false;
         for(var i = 0, j = 1 ; i < puzzlePieces.length - 1; i++, j++)
         {
-            if(j != puzzlePieces[i])
+                console.log("j=" +j+"\nPuzzlePiece="+typeof parseInt(puzzlePieces[i]));
+            
+            if(j != parseInt(puzzlePieces[i]))
             {
-                puzzlePieces = false;
+                console.log("j=" +j+"\nPuzzlePiece="+puzzlePieces[i]);
+                puzzleSolved = false;
                 break;
-            }                    
+            }                  
         }
 
         if(puzzleSolved)
         {
-            alert("You solved the fuckin puzzle.");
+            alert("You solved the puzzle.");
         }    
     }
     
